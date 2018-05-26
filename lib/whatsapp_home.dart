@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-
 import 'pages/call_screen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
 
 class WhatsAppHome extends StatefulWidget {
+   var cameras;
+   WhatsAppHome(this.cameras);
   @override
   _WhatsAppHomeState createState() => new _WhatsAppHomeState();
 }
@@ -44,7 +45,7 @@ TabController _tabController;
       body: new TabBarView(
         controller:  _tabController,
         children: <Widget>[
-          new CameraScreen(),
+          new CameraScreen(widget.cameras),
           new ChatScreen(),
           new StatusScreen(),
           new CallsScreen()
