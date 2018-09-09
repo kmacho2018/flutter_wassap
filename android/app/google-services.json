@@ -1,0 +1,42 @@
+{
+    "project_info": {
+      "project_number": "878077547789",
+      "firebase_url": "https://whatsfake-a0c4d.firebaseio.com",
+      "project_id": "whatsfake-a0c4d",
+      "storage_bucket": "whatsfake-a0c4d.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:878077547789:android:8ae3d1b904a2c5a2",
+          "android_client_info": {
+            "package_name": "com.twoksoft.whatsfake"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "878077547789-roi1ubep8gg16e7jrh8ej28cnfdlpedo.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDCk5JNTqgEB9HRrbXJ82Fby2reCXHjYGY"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 1,
+            "other_platform_oauth_client": []
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

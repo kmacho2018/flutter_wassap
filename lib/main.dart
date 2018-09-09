@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'whatsapp_home.dart';
 import 'package:camera/camera.dart';
 
+
 List<CameraDescription> cameras;
 
  Future<Null> main()async {
@@ -13,6 +14,10 @@ List<CameraDescription> cameras;
  }
 
 class MyApp extends StatelessWidget {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

@@ -3,6 +3,8 @@ import 'pages/call_screen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/chat_screen.dart';
 import 'pages/status_screen.dart';
+import 'package:firebase_admob/firebase_admob.dart';
+
 
 class WhatsAppHome extends StatefulWidget {
    var cameras;
@@ -11,16 +13,64 @@ class WhatsAppHome extends StatefulWidget {
   _WhatsAppHomeState createState() => new _WhatsAppHomeState();
 }
 
+
 class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderStateMixin {
 
 TabController _tabController;
+
+static final MobileAdTargetingInfo targetInfo = new MobileAdTargetingInfo(
+  testDevices: <String>[],
+  keywords: <String>['WhatsFake'],
+  birthday: new DateTime.now(),
+  childDirected: true
+);
+
+BannerAd _bannerAd;
+InterstitialAd _interstitialAd;
+
+BannerAd createBannerAd(){
+  return new BannerAd(
+    adUnitId: "ca-app-pub-5481418231019020/2280278018",
+    size: AdSize.banner,
+    targetingInfo: targetInfo,
+    listener: (MobileAdEvent event){
+      print("Banner event: $event");
+    }
+  );
+}
+
+InterstitialAd createInterstitialAd(){
+  return new InterstitialAd(
+    adUnitId: "ca-app-pub-5481418231019020/5968285434",
+    targetingInfo: targetInfo,
+    listener: (MobileAdEvent event){
+      print("Interstitial event: $event");
+    }
+  );
+}
+
+
 
 @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    try{
+    FirebaseAdMob.instance.initialize(appId: "1:878077547789:android:8ae3d1b904a2c5a2");
+    
+    _interstitialAd =  createInterstitialAd()
+    ..load()
+    ..show();
+    }catch(ex){}
     _tabController = new TabController(vsync: this,initialIndex: 1,length: 4);
   }
+
+  @override void dispose() {
+      // TODO: implement dispose
+      _bannerAd.dispose();
+      _interstitialAd.dispose();
+      super.dispose();
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -54,8 +104,10 @@ TabController _tabController;
       floatingActionButton: new FloatingActionButton(
         backgroundColor: Theme.of(context).accentColor,
         child: new Icon(Icons.message, color:Colors.white),
-        onPressed: ()=> print("Open chats"),
-      ),
+        
+        onPressed: ()=> _bannerAd =  createBannerAd()
+    ..load()
+    ..show()),
     );
   }
 }
