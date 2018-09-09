@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\KmachoLaptop\\Documents\\flutter_whatsapp\\build\\firebase_analytics\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\KmachoLaptop\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\f30a633e2d4dbf2110014748776eb597\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\KmachoLaptop\\Documents\\flutter_whatsapp\\build\\firebase_analytics\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\KmachoLaptop\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\f30a633e2d4dbf2110014748776eb597\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\KmachoLaptop\\Documents\\flutter_whatsapp\\build\\firebase_analytics\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\KmachoLaptop\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\f30a633e2d4dbf2110014748776eb597\\res\\color\\common_google_signin_btn_text_light.xml"
+    }
+]

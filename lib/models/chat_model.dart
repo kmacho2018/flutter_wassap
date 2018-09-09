@@ -8,31 +8,31 @@ class ChatModel{
 }
   List<ChatModel> dummyData =[
     new ChatModel(
-      name: "Juan Camacho",
-      message: "Flutter es lo mejor!!",
+      name: "Peter",
+      message: "OMG!!",
       time: "5:10",
-      avatarUrl: "https://pre00.deviantart.net/ef23/th/pre/i/2017/294/2/9/goku_miggate_no_goku_i_3_584_by_koku78-dbrb1j0.png"
+      avatarUrl: "https://i.pinimg.com/originals/6e/1e/9c/6e1e9c7aec60250f4fd64c4ce31285bb.png"
     ),
     new ChatModel(
-      name: "Fernan2",
-      message: "kmacho metiendo mano, el tipo es duro!!",
+      name: "James Camer",
+      message: "Good Morning!!",
       time: "15:11",
       avatarUrl: "https://vignette.wikia.nocookie.net/dragonball/images/0/01/KrillinBU01.png/revision/latest?cb=20100515144143"
     ),
     new ChatModel(
-      name: "Ramon USA",
-      message: "Estoy terminando el Facebook en Flutter",
+      name: "Robert USA",
+      message: "Hi!!!",
       time: "15:13",
       avatarUrl: "http://img.morphthing.com/i/27341/2/0/76bac43b/Shrek.jpeg"
     ),
     new ChatModel(
-      name: "Nelson .Net",
-      message: "Lo hare en xamarin, aunque tenga pila de bugs..",
+      name: "Jose",
+      message: "Que pasó con la reunión de mañana?",
       time: "15:15",
       avatarUrl: "http://2u4p9f41q51y4bu6tr1bnbhr.wpengine.netdna-cdn.com/wp-content/uploads/2017/04/Mr.Popo_.png"
     ),
     new ChatModel(
-      name: "Gaby H",
+      name: "Gaby",
       message: "Ahora, me haré un tatuaje de Dart",
       time: "15:16",
       avatarUrl: "https://images-na.ssl-images-amazon.com/images/I/71M1-gNkhnL._SY550_.jpg"
@@ -50,8 +50,8 @@ class ChatModel{
       avatarUrl: "https://vignette.wikia.nocookie.net/dragonball/images/c/cf/Picollo_Portrait.jpg/revision/latest?cb=20100813075704"
     ),
      new ChatModel(
-      name: "Jordany Ahorro y Prestamos S.A.",
-      message: "interesante",
+      name: "Jordano",
+      message: "Interesting!!",
       time: "15:21",
       avatarUrl: "https://vignette.wikia.nocookie.net/bobesponja/images/0/0b/Bob_Esponja_Don_Cangrejo.png/revision/latest?cb=20170412005839"
     )
