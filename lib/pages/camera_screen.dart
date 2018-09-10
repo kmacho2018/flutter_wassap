@@ -39,6 +39,8 @@ BannerAd createBannerAd(){
   );
 }
 
+
+
   CameraController cameraController;
   @override
     void initState() {
@@ -48,7 +50,10 @@ BannerAd createBannerAd(){
     
     _bannerAd =  createBannerAd()
     ..load()
-    ..show();}catch(e){}
+    ..show();
+    
+  
+    }catch(e){}
       super.initState();
       cameraController  = new CameraController(widget.cameras[0], ResolutionPreset.low);
       cameraController.initialize().then((_){
@@ -77,7 +82,7 @@ BannerAd createBannerAd(){
     }
     return new AspectRatio(
       aspectRatio: cameraController.value.aspectRatio,
-      child: new CameraPreview(cameraController),
+      child: new CameraPreview(cameraController)
     );
     /*return new Center(
       child: new Text("Camera",style: new TextStyle(fontSize: 20.0))

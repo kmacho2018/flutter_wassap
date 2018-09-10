@@ -1,0 +1,4 @@
+#Mon Sep 10 15:23:22 BOT 2018
+base.0=C\:\\Users\\KmachoLaptop\\Documents\\flutter_whatsapp\\build\\app\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

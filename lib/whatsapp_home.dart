@@ -38,15 +38,22 @@ BannerAd createBannerAd(){
     }
   );
 }
-
 InterstitialAd createInterstitialAd(){
   return new InterstitialAd(
-    adUnitId: "ca-app-pub-5481418231019020/5968285434",
+    adUnitId:  "ca-app-pub-5481418231019020/5968285434",
     targetingInfo: targetInfo,
     listener: (MobileAdEvent event){
       print("Interstitial event: $event");
     }
   );
+}
+
+void showAds(){
+  _bannerAd =  createBannerAd()
+    ..load()
+    ..show();
+
+  
 }
 
 
@@ -57,18 +64,18 @@ InterstitialAd createInterstitialAd(){
     super.initState();
     try{
     FirebaseAdMob.instance.initialize(appId: "1:878077547789:android:8ae3d1b904a2c5a2");
-    
     _interstitialAd =  createInterstitialAd()
     ..load()
-    ..show();
-    }catch(ex){}
+    ..show(
+       anchorOffset: 0.0,
+      anchorType: AnchorType.bottom);
     _tabController = new TabController(vsync: this,initialIndex: 1,length: 4);
+    }catch(ex){}
   }
 
   @override void dispose() {
       // TODO: implement dispose
       _bannerAd.dispose();
-      _interstitialAd.dispose();
       super.dispose();
     }
 
@@ -105,9 +112,7 @@ InterstitialAd createInterstitialAd(){
         backgroundColor: Theme.of(context).accentColor,
         child: new Icon(Icons.message, color:Colors.white),
         
-        onPressed: ()=> _bannerAd =  createBannerAd()
-    ..load()
-    ..show()),
-    );
+        onPressed: ()=> showAds(),
+    ));
   }
 }
